@@ -1,22 +1,33 @@
-import './App.css';
+import React from 'react';
+import { ChakraProvider, extendTheme } from '@chakra-ui/react';
+import './Fonts.css'
+import { Header } from './Components/Header/Header'
 
 function App() {
+  const fondoEstilo = extendTheme({
+    styles: {
+      global: {
+        body: {
+          bg: '#111320',
+          m: 0,
+          p: 0,
+          color:'#fff'
+        }
+      }
+    },
+    fonts: {
+      heading: 'Inconsolata, monospace',
+      body: 'Pridi, serif'
+    }
+  });
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <ChakraProvider theme={fondoEstilo}>
+        <Header>
+
+        </Header>
+      </ChakraProvider>
+    </>
   );
 }
 
