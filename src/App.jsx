@@ -3,8 +3,9 @@ import { ChakraProvider, extendTheme } from '@chakra-ui/react';
 import './Fonts.css'
 import { Header } from './Components/Header/Header'
 
+
 function App() {
-  const fondoEstilo = extendTheme({
+  const theme = extendTheme({
     styles: {
       global: {
         body: {
@@ -18,11 +19,18 @@ function App() {
     fonts: {
       heading: 'Inconsolata, monospace',
       body: 'Pridi, serif'
+    },
+    breakpoints: {
+      base: '100%',
+      sm: '768px',
+      md: '1024px',
+      lg: '1440px',
+      xl: '1920px',
     }
   });
   return (
     <>
-      <ChakraProvider theme={fondoEstilo}>
+      <ChakraProvider theme={theme}>
         <Header>
 
         </Header>
