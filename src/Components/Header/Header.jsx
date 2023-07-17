@@ -1,23 +1,32 @@
 import React from 'react';
-import { Box } from '@chakra-ui/react';
+import { Box, useBreakpointValue  } from '@chakra-ui/react';
 
 
 const Header = () => {
-  const headerStyles = {
+  const backgroundColors = useBreakpointValue({
+    base: 'orange',
+    sm: 'yellow',
+    md: 'red',
+    lg: 'violet',
+    xl: 'grey',
+  });
+
+  const headerStyles ={
     pt: '2rem',
     display:'flex',
     justifyContent: 'space-between',
     pos: 'sticky',
     top: 0,
-    zIndices: 10,
+    zIndex: 10,
     w: '85vw',
     m: '0 auto',
-    animation: 'invisible 2s linear'
+    animation: 'invisible 2s linear',
+    background: backgroundColors
   }
   return (
     <>
       <Box
-        sx={headerStyles}>
+        style={headerStyles}>
           <h1>hola</h1>
           <h1>mundo</h1>
           <h1>!</h1>
