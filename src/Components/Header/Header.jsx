@@ -1,15 +1,17 @@
 import React from 'react';
 import { Box, useBreakpointValue  } from '@chakra-ui/react';
-
+import { Logo } from '../Logo/Logo'
+import { NavBar } from '../NavBar/NavBar'
 
 const Header = () => {
-  const backgroundColors = useBreakpointValue({
-    base: 'orange',
-    sm: 'yellow',
-    md: 'red',
-    lg: 'violet',
-    xl: 'grey',
-  });
+  
+  const heightStyle = useBreakpointValue({
+    lg:'5rem',
+  })
+
+  const fontStyle = useBreakpointValue({
+    lg:'1.3rem',
+  })
 
   const headerStyles ={
     pt: '2rem',
@@ -18,18 +20,18 @@ const Header = () => {
     pos: 'sticky',
     top: 0,
     zIndex: 10,
-    w: '85vw',
-    m: '0 auto',
+    width: '85vw',
+    margin: '0 auto',
     animation: 'invisible 2s linear',
-    background: backgroundColors
+    height:heightStyle,
+    fontSize: fontStyle
   }
   return (
     <>
       <Box
         style={headerStyles}>
-          <h1>hola</h1>
-          <h1>mundo</h1>
-          <h1>!</h1>
+         <Logo></Logo>
+         <NavBar></NavBar>
       </Box>
     </>
   );
