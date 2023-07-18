@@ -26,6 +26,9 @@ function App() {
       md: '1024px',
       lg: '1440px',
       xl: '1920px',
+    },
+    transition:{
+      transition:'all 0.3s ease-in-out'
     }
   });
   return (

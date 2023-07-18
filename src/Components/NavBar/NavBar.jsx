@@ -1,36 +1,41 @@
-import { Box, useBreakpointValue } from '@chakra-ui/react';
 import React from 'react';
+import { Box, chakra, useBreakpointValue } from '@chakra-ui/react'
 
 const NavBar = () => {
 
- const displayStyle= useBreakpointValue({
-  md:'flex',
+ const NavLink = chakra.a
+
+ const marginStyle = useBreakpointValue({
+  base: '0.5rem',
+  md: '1rem',
+  lg: '1.2rem',
  })
 
- const alignStyle = useBreakpointValue({
-  md:'center',
+ const fontStyle = useBreakpointValue({
+  lg: '1.5rem',
  })
 
- const justifyStyle = useBreakpointValue({
-  md:'space-between',
-  lg:'space-evenly',
- })
-
- const widthStyle = useBreakpointValue({
-  md:'80%',
-  lg:'70%',
- })
-
- const divHeaderIcons ={
-  display:displayStyle,
-  alignItems:alignStyle,
-  justifyContent:justifyStyle,
-  width:widthStyle
+ const navAStyle = {
+  textDecoration: 'none',
+  color: '#fff',
+  padding: '0.2rem 0.8rem',
+  marginLeft: marginStyle,
+  _focus: {
+   borderBottom: '0.2rem solid #D76627'
+  },
+  _hover: {
+   borderBottom: '0.2rem solid #D76627',
+   color: '#61DAFB',
+  },
+  fontSize: fontStyle,
  }
 
  return (
   <Box
-  style={divHeaderIcons}>
+   as='nav'>
+   <NavLink __css={navAStyle} href="#">Sobre Mí</NavLink>
+   <NavLink __css={navAStyle} href="#">Habilidades</NavLink>
+   <NavLink __css={navAStyle} href="#">Experiencia</NavLink>
   </Box>
  );
 };
