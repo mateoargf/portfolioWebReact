@@ -2,6 +2,7 @@ import React from 'react';
 import { ChakraProvider, extendTheme } from '@chakra-ui/react';
 import './Fonts.css'
 import { Header } from './Components/Header/Header'
+import { Main } from './Components/Main/Main'
 
 
 function App() {
@@ -21,7 +22,7 @@ function App() {
       body: 'Pridi, serif'
     },
     breakpoints: {
-      base: '100%',
+      base: '200px',
       sm: '768px',
       md: '1024px',
       lg: '1440px',
@@ -34,9 +35,8 @@ function App() {
   return (
     <>
       <ChakraProvider theme={theme}>
-        <Header>
-
-        </Header>
+        <Header/>
+        <Main/>
       </ChakraProvider>
     </>
   );
