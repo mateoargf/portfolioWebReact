@@ -1,7 +1,7 @@
 import { Box, FormControl, chakra, useBreakpointValue } from '@chakra-ui/react';
 import React from 'react';
-import linkedinImage from '../../assets/icons8-linkedin.svg';
-import gitHubImage from '../../assets/icons8-github.svg';
+import linkedinImage from '../../Assets/icons8-linkedin.svg';
+import gitHubImage from '../../Assets/icons8-github.svg';
 
 const ContactHeader = () => {
  const NavLink = chakra.a
@@ -69,6 +69,7 @@ const ContactHeader = () => {
   _hover: {
    boxShadow: 'inset 0 -0.3rem 0.8rem #0772BB'
   },
+  transition:'all 0.3s ease-in-out',
   alignItems: 'center'
  }
 
@@ -83,6 +84,7 @@ const ContactHeader = () => {
   _hover: {
    boxShadow: 'inset 0 -0.3rem 0.8rem #0772BB'
   },
+  transition:'all 0.3s ease-in-out',
   background: ' linear-gradient(20deg, #00C9FF, #00C9FF, #00C9FF, #00546b, #00546b)',
   WebkitBackgroundClip: 'text',
   WebkitTextFillColor: 'transparent',
@@ -102,10 +104,11 @@ const ContactHeader = () => {
   alignItems: 'center',
   justifyContent: 'space-evenly',
   _hover: {
-   boxShadow: '0rem 0rem 0rem 0.2rem #D76627',
+   boxShadow: '0.1rem 0.1rem 0.8rem #D76627',
    color: '#61DAFB',
    backgroundColor: 'transparent'
   },
+  transition:'all 0.3s ease-in-out'
  }
 
  const emailBtn = {
@@ -126,11 +129,11 @@ const ContactHeader = () => {
     action="mailto:mateogf@hotmail.com"
     sx={headerDivEmail}>
     <p>Contactame <button
-      style={emailBtn}>
-      <NavLink className="bi bi-envelope-fill"
-       __css={burbujaEmail}>
-      </NavLink>
-     </button>
+     style={emailBtn}>
+     <NavLink className="bi bi-envelope-fill"
+      __css={burbujaEmail}>
+     </NavLink>
+    </button>
     </p>
    </FormControl>
   </Box>

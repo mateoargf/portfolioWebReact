@@ -27,6 +27,7 @@ const NavBar = () => {
    borderBottom: '0.2rem solid #D76627',
    color: '#61DAFB',
   },
+  transition:'all 0.3s ease-in-out',
   fontSize: fontStyle,
  }
 
