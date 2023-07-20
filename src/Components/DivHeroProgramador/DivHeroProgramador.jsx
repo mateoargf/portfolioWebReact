@@ -1,5 +1,7 @@
 import { Box, useBreakpointValue } from '@chakra-ui/react';
 import React from 'react';
+import { keyframes } from '@emotion/react';
+import styled from '@emotion/styled';
 import yo from '../../Assets/MateoRecortado.png'
 import nodeJS from '../../Assets/icons8-node-js-240.png'
 import jS from '../../Assets/icons8-javascript-480.png'
@@ -21,71 +23,6 @@ const DivHeroProgramador = () => {
   lg: '85vh',
  })
 
- const nodePRes = useBreakpointValue({
-  base: '0.5rem',
-  sm: '0.7rem',
-  lg: '0.98rem',
- })
- const nodeHRes = useBreakpointValue({
-  base: '2.7rem',
-  sm: '3.75rem',
-  lg: '5rem',
- })
- const nodeTRes = useBreakpointValue({
-  base: '0.4rem',
-  sm: '2.5rem',
-  md: '5rem',
-  lg: 'calc(22%*0.3)',
- })
- const nodeRRes = useBreakpointValue({
-  base: '1.2rem',
-  sm: '2.1rem',
-  md: '3.3rem'
- })
-
- const jsTRes = useBreakpointValue({
-  base: '11rem',
-  sm: '14rem',
-  md: '13.1rem',
-  lg: 'calc(22%*2.1)'
- })
- const jsRRes = useBreakpointValue({
-  base: '-2rem',
-  sm: '-3rem',
-  md: '-3rem',
-  lg: '-4rem'
- })
- const jsPRes = useBreakpointValue({
-  base: 'calc(0.7rem*0.9)',
-  sm: 'calc(0.7rem*1.4)',
-  md: 'calc(0.7rem*1.5)',
-  lg: ' calc(0.7rem*2)'
- })
- const jsHRes = useBreakpointValue({
-  base: '3.3rem',
-  sm: '5rem',
-  md: '6rem',
-  lg: '9rem'
- })
-
- const reactPRes = useBreakpointValue({
-  base: '1rem',
-  md: '1.5rem',
-  lg: '2rem'
- })
- const reactHRes = useBreakpointValue({
-  base: '7rem',
-  md: '8.5rem',
-  lg: '13rem'
- })
- const reactTRes = useBreakpointValue({
-  base: '',
- })
- const reactRRes = useBreakpointValue({
-  base: '-2rem',
-  md: '-1.5rem',
- })
-
  const divHeroProgramador = {
   display: 'flex',
   flexDirection: 'column',
@@ -93,6 +30,7 @@ const DivHeroProgramador = () => {
   alignItems: 'end',
   position: 'relative',
   animation: 'invisible 2s linear',
+  borderRadius: '50%',
   objectFit: 'cover',
   width: divProWRes,
   margin: divProMRes
@@ -112,77 +50,209 @@ const DivHeroProgramador = () => {
  }
 
  const nodeJSStyle = {
-  padding: nodePRes,
-  height: nodeHRes,
-  top: nodeTRes,
-  right: nodeRRes
+  base: {
+   padding: '0.5rem',
+   height: '3rem',
+   top: '7rem',
+   right: '1.5rem',
+  },
+  sm: {
+   padding: '0.7rem',
+   height: '3.75rem',
+   top: '8rem',
+   right: '5rem',
+  },
+  md: {
+   padding: '0.7rem',
+   height: '3.75rem',
+   top: '6rem',
+   right: '4rem'
+  },
+  lg: {
+   padding: '0.98rem',
+   height: '5rem',
+   top: '11rem',
+   right: '6.5rem'
+  },
+  xl: {
+   padding: '1rem',
+   height: '7rem',
+   top: '12rem',
+   right: '7rem'
+  },
  }
 
  const jsStyle = {
-  padding: jsPRes,
-  height: jsHRes,
-  top: jsTRes,
-  right: jsRRes
+  base: {
+   padding: '1rem',
+   height: '4.5rem',
+   top: '13rem',
+   right: '-1.4rem'
+  },
+  sm: {
+   padding: '1.2rem',
+   height: '5.5rem',
+   top: '14.5rem',
+   right: '1rem'
+  },
+  md: {
+   padding: '1rem',
+   height: '5.7rem',
+   top: '12.5rem',
+   right: '-0.1rem'
+  },
+  lg: {
+   padding: '1.5rem',
+   height: '8rem',
+   top: '21rem',
+   right: '-0.2rem'
+  },
+  xl: {
+   padding: '2rem',
+   height: '10rem',
+   top: '25rem',
+   right: '-0.5rem'
+  }
  }
 
  const reactStyle = {
-  padding: reactPRes,
-  height: reactHRes,
-  top: reactTRes,
-  right: reactRRes
+  base: {
+   padding: '1.2rem',
+   height: '6rem',
+   top: '',
+   right: '-2rem'
+  },
+  sm: {
+   padding: '1.7rem',
+   height: '8rem',
+  },
+  md: {
+   padding: '1.5rem',
+   height: '8rem',
+  },
+  lg: {
+   padding: '2.5rem',
+   height: '12rem',
+  },
+  xl: {
+   padding: '3rem',
+   height: '15rem'
+  }
  }
 
- // const flickerAnimation = keyframes`
- //  0% {
- //    opacity: 0.1;
- //    boxShadow: 0 -1.5rem 10rem rgba(214, 100, 39, 0.9);
- //  }
- //  2% {
- //    opacity: 1;
- //    boxShadow: 0 -1.5rem 10rem rgba(214, 100, 39, 0.9);
- //  }
- //  4% {
- //    opacity: 0.1;
- //    boxShadow: 0 -1.5rem 10rem rgba(214, 100, 39, 0.9);
- //  }
- //  8% {
- //    opacity: 1;
- //    boxShadow: 0 -1.5rem 10rem rgba(214, 100, 39, 0.9);
- //  }
- //  70% {
- //    opacity: 0.7;
- //    boxShadow: 0 -1.5rem 10rem rgba(214, 100, 39, 0.9);
- //  }
- //  100% {
- //    opacity: 1;
- //    boxShadow: 0 -1.5rem 10rem rgba(214, 100, 39, 0.73);
- //  }`
+ const flickerAnimation = keyframes`
+   0% {
+     opacity: 0.1;
+     boxShadow: 0 -1.5rem 10rem rgba(214, 100, 39, 0.9);
+   }
+   2% {
+     opacity: 1;
+     boxShadow: 0 -1.5rem 10rem rgba(214, 100, 39, 0.9);
+   }
+   4% {
+     opacity: 0.1;
+     boxShadow: 0 -1.5rem 10rem rgba(214, 100, 39, 0.9);
+   }
+   8% {
+     opacity: 1;
+     boxShadow: 0 -1.5rem 10rem rgba(214, 100, 39, 0.9);
+   }
+   70% {
+     opacity: 0.7;
+     boxShadow: 0 -1.5rem 10rem rgba(214, 100, 39, 0.9);
+   }
+   100% {
+     opacity: 1;
+     boxShadow: 0 -1.5rem 10rem rgba(214, 100, 39, 0.73);
+   }`
 
- const circuloHero = {
-  height: '80%',
-  width: '78%',
-  backgroundColor: '#111320',
-  borderWidth: '2rem',
-  borderColor: '#D76627',
-  borderRadius: '50%',
-  position: 'absolute',
-  zIndex: '-10',
-  left: '50%',
-  transform: 'translateX(-50%)'
+ const circuloHeroRes = {
+  base: {
+   height: '80%',
+   width: '100%',
+   borderWidth: '1.5rem',
+   backgroundColor: '#111320',
+   borderColor: '#D76627',
+   borderRadius: '50%',
+   position: 'absolute',
+   zIndex: '-10',
+   left: '50%',
+   transform: 'translateY(5%) translateX(-50%)',
+   boxShadow: '0 -1.5rem 10rem #d865286c'
+  },
+  sm: {
+   height: '85%',
+   width: '85%',
+   borderWidth: '1.9rem',
+   backgroundColor: '#111320',
+   borderColor: '#D76627',
+   borderRadius: '100%',
+   position: 'absolute',
+   zIndex: '-10',
+   left: '50%',
+   transform: 'translateY(5%) translateX(-50%)',
+   boxShadow: '0 -1.5rem 10rem #d865286c'
+  },
+  md: {
+   height: '90%',
+   width: '90%',
+   borderWidth: '2rem',
+   transform: 'translateY(5%) translateX(-50%)',
+   backgroundColor: '#111320',
+   borderColor: '#D76627',
+   borderRadius: '100%',
+   position: 'absolute',
+   zIndex: '-10',
+   left: '50%',
+   boxShadow: '0 -1.5rem 10rem #d865286c'
+  },
+  lg: {
+   height: '90%',
+   width: '90%',
+   borderWidth: '3rem',
+   transform: 'translateY(5%) translateX(-50%)',
+   backgroundColor: '#111320',
+   borderColor: '#D76627',
+   borderRadius: '100%',
+   position: 'absolute',
+   zIndex: '-10',
+   left: '50%',
+   boxShadow: '0 -1.5rem 10rem #d865286c'
+  }
  }
+
+ const sizeLenguajes = useBreakpointValue({
+  base: 'base',
+  sm: 'sm',
+  md: 'md',
+  lg: 'lg',
+  xl: 'xl'
+ })
+ const size = useBreakpointValue({
+  base: 'base',
+  sm: 'sm',
+  md: 'md',
+  lg: 'lg'
+ })
+
+ const StyledCirculoHero = styled.div` 
+   animation: ${flickerAnimation} 2s linear infinite
+  `
+
  return (
   <Box
    style={divHeroProgramador}>
    <img src={yo} alt="programador"
     style={programador} />
-   <img src={nodeJS} alt="nodeJS"
-    style={{ ...logos, ...nodeJSStyle }} />
+   <img src={nodeJS} alt="nodeJS" 
+    style={{ ...logos, ...nodeJSStyle[sizeLenguajes], objectFit: 'cover' }} />
    <img src={jS} alt="JS"
-    style={{ ...logos, ...jsStyle }} />
+    style={{ ...logos, ...jsStyle[sizeLenguajes], objectFit: 'cover' }} />
    <img src={react} alt="React"
-    style={{ ...logos, ...reactStyle }} />
-   <div
-    style={circuloHero}></div>
+    style={{ ...logos, ...reactStyle[sizeLenguajes], objectFit: 'cover' }} />
+   <StyledCirculoHero
+    style={{ ...circuloHeroRes[size] }}>
+   </StyledCirculoHero>
   </Box>
  );
 };
