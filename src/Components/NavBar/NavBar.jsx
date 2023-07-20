@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Box, chakra, useBreakpointValue } from '@chakra-ui/react';
 import { Link as ScrollLink } from 'react-scroll';
+
 const NavBar = () => {
  const NavLink = chakra(ScrollLink);
 
