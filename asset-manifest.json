@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/portfolioWebReact/static/css/main.b6235d05.css",
+    "main.js": "/portfolioWebReact/static/js/main.60c79476.js",
+    "static/media/MateoRecortado.png": "/portfolioWebReact/static/media/MateoRecortado.5c89af862d6c910013fc.png",
+    "static/media/icons8-reaccionar-480.png": "/portfolioWebReact/static/media/icons8-reaccionar-480.90bedd7d42f60ab39b99.png",
+    "static/media/LogoUTN_nvgsb.png": "/portfolioWebReact/static/media/LogoUTN_nvgsb.297c70c6a12db149d7d2.png",
+    "static/media/icons8-css3-480.png": "/portfolioWebReact/static/media/icons8-css3-480.8aaf7833370a6845139c.png",
+    "static/media/icons8-html5-480.png": "/portfolioWebReact/static/media/icons8-html5-480.be50d4568ab0cb01edb8.png",
+    "static/media/icons8-github.svg": "/portfolioWebReact/static/media/icons8-github.ac5a36b32b4d0985af9c42f8575f4cd1.svg",
+    "static/media/icons8-linkedin.svg": "/portfolioWebReact/static/media/icons8-linkedin.3b0b5d43f6e9e6ce90191c889cf42653.svg",
+    "index.html": "/portfolioWebReact/index.html",
+    "main.60c79476.js.map": "/portfolioWebReact/static/js/main.60c79476.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b6235d05.css",
+    "static/js/main.60c79476.js"
+  ]
+}
