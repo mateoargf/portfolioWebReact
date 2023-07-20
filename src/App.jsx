@@ -21,6 +21,8 @@ import github from './Assets/icons8-github.svg'
 import { Header } from "./Components/Header/Header";
 // import { Main } from "./Components/Main/Main";
 import { FormularioFooter } from "./Components/FormularioFooter/FormularioFooter";
+// TEXT
+
 
 function App() {
   const theme = extendTheme({
