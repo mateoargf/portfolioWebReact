@@ -1,5 +1,6 @@
 import { Box, FormControl, chakra, useBreakpointValue } from '@chakra-ui/react';
 import React from 'react';
+import { Link as ScrollLink } from 'react-scroll';
 import linkedinImage from '../../Assets/icons8-linkedin.svg';
 import gitHubImage from '../../Assets/icons8-github.svg';
 
@@ -69,7 +70,7 @@ const ContactHeader = () => {
   _hover: {
    boxShadow: 'inset 0 -0.3rem 0.8rem #0772BB'
   },
-  transition:'all 0.3s ease-in-out',
+  transition: 'all 0.3s ease-in-out',
   alignItems: 'center'
  }
 
@@ -84,7 +85,7 @@ const ContactHeader = () => {
   _hover: {
    boxShadow: 'inset 0 -0.3rem 0.8rem #0772BB'
   },
-  transition:'all 0.3s ease-in-out',
+  transition: 'all 0.3s ease-in-out',
   background: ' linear-gradient(20deg, #00C9FF, #00C9FF, #00C9FF, #00546b, #00546b)',
   WebkitBackgroundClip: 'text',
   WebkitTextFillColor: 'transparent',
@@ -103,12 +104,13 @@ const ContactHeader = () => {
   flexWrap: 'nowrap',
   alignItems: 'center',
   justifyContent: 'space-evenly',
+  cursor: 'pointer',
   _hover: {
    boxShadow: '0.1rem 0.1rem 0.8rem #D76627',
    color: '#61DAFB',
    backgroundColor: 'transparent'
   },
-  transition:'all 0.3s ease-in-out'
+  transition: 'all 0.3s ease-in-out'
  }
 
  const emailBtn = {
@@ -124,18 +126,24 @@ const ContactHeader = () => {
     <NavLink href="https://www.linkedin.com/in/mateo-gomez-fleytas-579053221/" target="_blank" rel="noreferrer" __css={{ ...burbuja, ...linkEdin }}></NavLink>
     <NavLink href="https://github.com/mateoargf" target="_blank" rel="noreferrer" __css={{ ...burbuja, ...gitHub }}></NavLink>
    </div>
-   <FormControl
-    as='form'
-    action="mailto:mateogf@hotmail.com"
-    sx={headerDivEmail}>
-    <p>Contactame <button
-     style={emailBtn}>
-     <NavLink className="bi bi-envelope-fill"
-      __css={burbujaEmail}>
-     </NavLink>
-    </button>
-    </p>
-   </FormControl>
+   <ScrollLink
+   to="footer" // Reemplaza "section1" con el ID del elemento al que deseas hacer scroll
+   spy={true}
+   smooth={true}
+   duration={2500}>
+    <FormControl
+     as='form'
+     action="mailto:mateogf@hotmail.com"
+     sx={headerDivEmail}>
+     <p>Contactame <button
+      style={emailBtn}>
+      <NavLink className="bi bi-envelope-fill"
+       __css={burbujaEmail}>
+      </NavLink>
+     </button>
+     </p>
+    </FormControl>
+   </ScrollLink>
   </Box>
  );
 };
