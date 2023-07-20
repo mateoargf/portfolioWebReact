@@ -2,6 +2,7 @@ import React from 'react';
 import { Box, useBreakpointValue } from '@chakra-ui/react';
 import { Logo } from '../Logo/Logo'
 import { DivNav } from '../DivNav/DivNav'
+import { MenuHamburguesa } from '../MenuHamburguesa/MenuHamburguesa'
 
 const Header = () => {
 
@@ -11,11 +12,6 @@ const Header = () => {
 
   const fontStyle = useBreakpointValue({
     lg: '1.3rem',
-  })
-
-  const menuResponse = useBreakpointValue({
-    base: 'inline',
-    md: 'none'
   })
 
   const headerStyles = {
@@ -32,21 +28,13 @@ const Header = () => {
     height: heightStyle,
     fontSize: fontStyle
   }
-
-  const menuStyle = {
-    display: menuResponse
-  }
   return (
     <>
       <Box
         sx={headerStyles}>
         <Logo></Logo>
-        <div>
-          <i className='bi bi-list '
-            style={menuStyle}></i>
-        </div>
+        <MenuHamburguesa/>
         <DivNav></DivNav>
-
       </Box>
     </>
   );
