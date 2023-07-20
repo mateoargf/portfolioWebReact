@@ -17,11 +17,11 @@ import ts from './Assets/icons8-typescript-480.png'
 import git from './Assets/icons8-git-480.png'
 import flechaLarga from './Assets/icons8-flecha-arriba-larga-50.png'
 import linkImg from './Assets/icons8-linkedin.svg'
-import github from './icons8-github.svg'
+import github from './Assets/icons8-github.svg'
 import { Header } from "./Components/Header/Header";
 // import { Main } from "./Components/Main/Main";
 import { FormularioFooter } from "./Components/FormularioFooter/FormularioFooter";
-// TEXT
+// 
 
 function App() {
   const theme = extendTheme({
